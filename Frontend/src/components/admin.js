@@ -10,7 +10,7 @@ const AdminPage = () => {
     useEffect(() => {
         const fetchAdminData = async () => {
             try {
-                const response = await axios.get('http://localhost:3001/adminData');
+                const response = await axios.get('https://mern-1-mn2n.onrender.com/adminData');
                 setAdminData(response.data);
             } catch (error) {
                 console.error('Error fetching admin data:', error);
@@ -27,7 +27,7 @@ const AdminPage = () => {
     const handleDeleteProduct = async (productId) => {
         try {
             console.log('Deleting product with ID:', productId);
-            await axios.delete(`http://localhost:3001/products/${productId}`);
+            await axios.delete(`https://mern-1-mn2n.onrender.com/${productId}`);
             
             console.log('Product deleted successfully.');
     
